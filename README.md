@@ -20,8 +20,10 @@ docker run -it -d -p <hostport>:8080 --name <name> lsjhome/rci_rest_api:1.0
 
 ## Example
 - post
+
 http://localhost:<hostport>/predict?age=40&gender=여&contract_month=6&credit_check=거절&credit=7~9&postcode=06&car_price=25730000&principal=20000000&n_div=10
 - Return
+    
 {
     "predict_proba": 0.1968,
     "rank": 2
