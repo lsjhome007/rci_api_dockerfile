@@ -1,3 +1,65 @@
+# English
+# Installation
+
+## Python 3.6.4
+
+Install Python 3.6.4 via Pyenv, Anaconda, or Python Foundation
+
+## Install Packages
+- pip3 install -r requirements.txt
+
+## Files and Folder Description
+- preprocess: Folder for preprocessing files
+	- \_\_init\_\_.py: required to make Python treat the directories as containing packages
+	- catboost.pkl: Python Pickle file that contains ML model
+	- feature\_prepro.py: Contains functions for data preprocessing
+	- make\_rank.py: Transform ML probability to Rank
+	- pc\_score.pkl: contains information for transforming customers' postcode to continous value that has 100 as max
+	- prob\_list.pkl: contains information for transforming probabilities to ranks
+	- scoring.py: Making Categorical variable continous variable
+	- rci\_rest\_api.py: **REST API Server**
+	- rci\_solution\_api\_demo_.py: solution demo file that predict customers' probability to buy insurance and their rank based on input
+		- python rci\__solution\_api\_demo.py -h has help function
+- requirements.txt: Python packages for the solution installation
+- RCI\_REST\_API.docx: REST API description file
+
+## Usage
+
+- Solution file
+```sh
+$ python rci_restful_api.py &
+[1] 84591
+$ * Serving Flask app "rci_restful_api" (lazy loading)
+  * Environment: production
+    WARNING: Do not use the development server in a production environment.
+    Use a production WSGI server instead.
+    * Debug mode: off
+    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
+- Solution Demo file
+```sh
+$ python rci_solution_api_demo.py --age 20 --gender '남' --contract_month 12 --credit_check '조건부' --credit '7~9' --postcode '07' --car_price 20000000 --principal 19000000 --n_div 5
+가입확률: 0.1317, 고객등급: 2
+```
+
+## Parameters
+
+- age: age, int type
+- gender: gender, str type
+- contract\_month: month when the contract made, int type
+- credit\_check: credit check, str type
+- credit: credit, str type
+- postcode: postcode, str type
+- car\_price: car price, int type
+- principal: principal, int type
+- n\_div: the number of total ranks, int type
+
+
+
+
+
+# 한글
 # 설치법
 
 ## Python 3.6.4 설치
